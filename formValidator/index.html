@@ -1,13 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-bold mb-6 text-center">Register</h2>
+
+      <!-- Starting Of Form -->
+      <form action="#" method="POST" autocomplete="off" id="form">
+        <!-- Name Field -->
+        <div class="mb-4">
+          <label
+            for="name"
+            class="block text-lg fonrt-medium mb-2 text-gray-700"
+            >Name</label
+          >
+          <input
+            autocomplete="off"
+            type="text"
+            id="name"
+            name="name"
+            class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
+            placeholder="Enter your name"
+          />
+        </div>
+
+        <!-- Email Field -->
+        <div class="mb-4">
+          <label
+            for="email"
+            class="block text-lg fonrt-medium mb-2 text-gray-700"
+            >Email</label
+          >
+          <input
+            autocomplete="off"
+            type="email"
+            name="email"
+            id="email"
+            class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
+            placeholder="Enter your Email"
+          />
+        </div>
+
+        <!-- Password Field -->
+        <div class="mb-4">
+          <label
+            for="password"
+            class="block text-lg font-medium mb-2 text-gray-700"
+            >Password</label
+          >
+          <div class="flex items-center relative">
+            <input
+              autocomplete="off"
+              type="password"
+              name="password"
+              id="password"
+              class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 pr-10"
+              placeholder="Enter your password"
+            />
+            <i
+              class="fa-solid fa-eye absolute right-3 text-gray-700 cursor-pointer emoji password"
+            ></i>
+          </div>
+        </div>
+
+        <!-- Confirm Password Field -->
+        <div class="mb-4">
+          <label
+            for="cnf_password"
+            class="block text-lg font-medium mb-2 text-gray-700"
+            >Password</label
+          >
+          <div class="flex items-center relative">
+            <input
+              autocomplete="off"
+              type="password"
+              name="cnf_password"
+              id="cnf_password"
+              class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 pr-10"
+              placeholder="Re Enter your password"
+            />
+            <i
+              class="fa-solid fa-eye absolute right-3 text-gray-700 cursor-pointer emoji cnf_password"
+            ></i>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button
+            type="submit"
+            class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-4 rounded-md"
+          >
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
