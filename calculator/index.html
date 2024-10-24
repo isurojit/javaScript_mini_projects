@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="w-full max-w-sm bg-white p-6 rounded-lg shadow-lg">
+      <!-- Display Screen -->
+      <div
+        id="display"
+        class="bg-gray-200 text-right text-4xl font-bold p-4 rounded-lg mb-4 display"
+      >
+        0
+      </div>
+
+      <!-- Calculator Buttons -->
+      <div class="grid grid-cols-4 gap-4">
+        <!-- Row 1 -->
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="9"
+        >
+          9
+        </button>
+        <button
+          id="clear"
+          class="bg-red-500 p-4 rounded-lg text-xl font-bold text-white hover:bg-red-600"
+        >
+          AC
+        </button>
+        <button
+          id="delete"
+          class="bg-yellow-500 p-4 rounded-lg text-xl font-bold text-white hover:bg-yellow-600"
+        >
+          ⌫
+        </button>
+        <button
+          class="bg-orange-500 p-4 rounded-lg text-xl font-bold text-white hover:bg-orange-600"
+          data-operator="/"
+        >
+          /
+        </button>
+
+        <!-- Row 2 -->
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="7"
+        >
+          7
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="8"
+        >
+          8
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="6"
+        >
+          6
+        </button>
+        <button
+          class="bg-orange-500 p-4 rounded-lg text-xl font-bold text-white hover:bg-orange-600"
+          data-operator="*"
+        >
+          *
+        </button>
+
+        <!-- Row 3 -->
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="4"
+        >
+          4
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="5"
+        >
+          5
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="3"
+        >
+          3
+        </button>
+        <button
+          class="bg-orange-500 p-4 rounded-lg text-xl font-bold text-white hover:bg-orange-600"
+          data-operator="-"
+        >
+          -
+        </button>
+
+        <!-- Row 4 -->
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="1"
+        >
+          1
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="2"
+        >
+          2
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="0"
+        >
+          0
+        </button>
+        <button
+          class="bg-orange-500 p-4 rounded-lg text-xl font-bold text-white hover:bg-orange-600"
+          data-operator="+"
+        >
+          +
+        </button>
+
+        <!-- Row 5 -->
+        <button
+          class="bg-green-500 col-span-2 p-4 rounded-lg text-xl font-bold text-white hover:bg-green-600"
+          id="equals"
+        >
+          =
+        </button>
+        <button
+          class="bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400"
+          data-value="."
+        >
+          .
+        </button>
+        <button
+          class="bg-blue-500 p-4 rounded-lg text-xl font-bold text-white hover:bg-blue-600"
+          id="square"
+        >
+          x²
+        </button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
