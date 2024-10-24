@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100 p-8">
+    <!-- Heading -->
+    <h1 class="text-4xl font-bold mb-8">Shop</h1>
+
+    <!-- Search Bar and Category Buttons -->
+    <div class="flex justify-between items-center mb-8">
+      <!-- Search Bar -->
+      <div class="flex items-center w-1/2">
+        <input
+          id="search"
+          type="text"
+          placeholder="Search..."
+          class="border border-gray-300 p-2 rounded-l w-full"
+        />
+        <button
+          class="bg-blue-500 text-white px-4 py-2 rounded-r search-btn"
+          type="button"
+        >
+          Search
+        </button>
+      </div>
+
+      <!-- Category Buttons -->
+      <div class="space-x-4">
+        <button
+          class="px-4 py-2 rounded hover:bg-gray-300 category-btn"
+          type="button"
+          data-category="all"
+        >
+          All Products
+        </button>
+        <button
+          class="px-4 py-2 rounded hover:bg-gray-300 category-btn"
+          type="button"
+          data-category="electronics"
+        >
+          Electronics
+        </button>
+        <button
+          class="px-4 py-2 rounded hover:bg-gray-300 category-btn"
+          type="button"
+          data-category="clothing"
+        >
+          Clothing
+        </button>
+        <button
+          class="px-4 py-2 rounded hover:bg-gray-300 category-btn"
+          type="button"
+          data-category="personal-care"
+        >
+          Personal Care
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Tiles -->
+    <div
+      id="product-grid"
+      class="grid grid-cols-2 md:grid-cols-4 gap-6 product-list"
+    >
+      <!-- Tile 1 -->
+      <div
+        class="border rounded-lg p-4 bg-white product-items"
+        data-category="electronics"
+      >
+        <h3 class="font-bold text-lg">Laptop</h3>
+        <span class="text-sm text-gray-500">Electronics</span>
+      </div>
+
+      <!-- Tile 2 -->
+      <div
+        class="border rounded-lg p-4 bg-white product-items"
+        data-category="electronics"
+      >
+        <h3 class="font-bold text-lg">Headphones</h3>
+        <span class="text-sm text-gray-500">Electronics</span>
+      </div>
+
+      <!-- Tile 3 -->
+      <div
+        class="border rounded-lg p-4 bg-white product-items"
+        data-category="clothing"
+      >
+        <h3 class="font-bold text-lg">T-Shirt</h3>
+        <span class="text-sm text-gray-500">Clothing</span>
+      </div>
+
+      <!-- Tile 4 -->
+      <div
+        class="border rounded-lg p-4 bg-white product-items"
+        data-category="personal-care"
+      >
+        <h3 class="font-bold text-lg">Shampoo</h3>
+        <span class="text-sm text-gray-500">Personal Care</span>
+      </div>
+
+      <!-- Tile 5 -->
+      <div
+        class="border rounded-lg p-4 bg-white product-items"
+        data-category="electronics"
+      >
+        <h3 class="font-bold text-lg">Smartphone</h3>
+        <span class="text-sm text-gray-500">Electronics</span>
+      </div>
+
+      <!-- Tile 6 -->
+      <div
+        class="border rounded-lg p-4 bg-white product-items"
+        data-category="clothing"
+      >
+        <h3 class="font-bold text-lg">Jeans</h3>
+        <span class="text-sm text-gray-500">Clothing</span>
+      </div>
+
+      <!-- Tile 7 -->
+      <div
+        class="border rounded-lg p-4 bg-white product-items"
+        data-category="personal-care"
+      >
+        <h3 class="font-bold text-lg">Face Wash</h3>
+        <span class="text-sm text-gray-500">Personal Care</span>
+      </div>
+
+      <!-- Tile 8 -->
+      <div
+        class="border rounded-lg p-4 bg-white product-items"
+        data-category="electronics"
+      >
+        <h3 class="font-bold text-lg">Tablet</h3>
+        <span class="text-sm text-gray-500">Electronics</span>
+      </div>
+
+      <!-- Tile 9 -->
+      <div
+        class="border rounded-lg p-4 bg-white product-items"
+        data-category="clothing"
+      >
+        <h3 class="font-bold text-lg">Dress</h3>
+        <span class="text-sm text-gray-500">Clothing</span>
+      </div>
+
+      <!-- Tile 10 -->
+      <div
+        class="border rounded-lg p-4 bg-white product-items"
+        data-category="personal-care"
+      >
+        <h3 class="font-bold text-lg">Body Lotion</h3>
+        <span class="text-sm text-gray-500">Personal Care</span>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
