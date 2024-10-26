@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 p-8">
+    <div class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <h1 class="text-2xl font-semibold text-gray-700 mb-4">Expense Tracker</h1>
+
+      <!-- Expense Form -->
+      <form id="expense-form" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-600"
+            >Expense Description</label
+          >
+          <input
+            type="text"
+            id="description"
+            class="w-full p-2 border border-gray-300 rounded mt-1"
+            placeholder="Enter description"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-600"
+            >Category</label
+          >
+          <select
+            id="category"
+            class="w-full p-2 border border-gray-300 rounded mt-1"
+          >
+            <option value="">Select a category</option>
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Entertainment">Entertainment</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-600">Amount</label>
+          <input
+            type="number"
+            id="amount"
+            class="w-full p-2 border border-gray-300 rounded mt-1"
+            placeholder="Enter amount"
+          />
+        </div>
+
+        <button
+          type="button"
+          id="submit-btn"
+          class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
+        >
+          Submit
+        </button>
+      </form>
+
+      <!-- Expense Table -->
+      <div class="mt-8">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Expense List</h2>
+        <table class="w-full text-left border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="p-2 border border-gray-300">Description</th>
+              <th class="p-2 border border-gray-300">Category</th>
+              <th class="p-2 border border-gray-300">Amount</th>
+            </tr>
+          </thead>
+          <tbody id="expense-table" class="text-gray-700"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
